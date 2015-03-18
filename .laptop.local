@@ -1,7 +1,13 @@
 #!/bin/sh
 
+brew install phantomjs
+
 brew tap caskroom/cask
 brew install caskroom/cask/brew-cask
+
+brew tap Homebrew/versions
+
+brew install fasd
 
 brew cask install alfred
 brew cask alfred link
@@ -58,3 +64,12 @@ brew cask install wireshark
 brew cask install xmind
 brew cask install ynab
 
+brew tap caskroom/fonts
+
+brew cask install font-merriweather-sans
+brew cask install font-merriweather
+brew cask install font-titillium-web
+
+npm install --global pure-prompt
+
+echo "See https://github.com/sindresorhus/pure#getting-started for instructions on enabling the pure shell"
