@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+describe "${1}" do
+  subject(:${1}) { DateRange.new('${1}') }
+
+  its(:first) { should eq Time.new(2014, 01, 12, 00, 00, 00) }
+  its(:last)  { should eq Time.new(2014, 01, 12, 23, 59, 59) }
+end
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>daterange</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.ruby</scope>
+</snippet>
