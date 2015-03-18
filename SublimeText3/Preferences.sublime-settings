@@ -23,9 +23,9 @@
 	"ignored_packages":
 	[
 		"Vintage",
-		"Markdown",
 		"SublimeLinter",
-		"TrailingSpaces"
+		"TrailingSpaces",
+		"Markdown"
 	],
 	"remember_open_files": false,
 	"show_encoding": false,
@@ -56,7 +56,6 @@
 		"TCL": "tcl"
 	},
 	"tab_size": 2,
-	"theme": "itg.flat.dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
