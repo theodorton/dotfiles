@@ -4,9 +4,6 @@ set -gx OMF_PATH /Users/theodorton/.local/share/omf
 # Customize Oh My Fish configuration path.
 #set -gx OMF_CONFIG /Users/theodorton/.config/omf
 
-# Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
-
 # Aliases
 balias gs 'git status'
 balias ga 'git add'
@@ -63,13 +60,15 @@ set PATH $HOME/.crenv/bin $PATH
 # Android Home
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-# React editor
+# Editors
+export BUNDLER_EDITOR=atom
 export REACT_EDITOR=atom
 
 # Google Cloud SDK Settings
 set MANPATH /usr/local/share/man /usr/share/man /opt/x11/share/man
 set PATH /usr/local/sbin $PATH
-set PATH /usr/local/opt/gnupg/libexec/gpgbin $PATH
-set PATH /usr/local/opt/go/libexec/bin $PATH
+set PATH /Users/theodorton/Qt5.5.1/5.5/clang_64/bin $PATH
+# set PATH /usr/local/opt/gnupg/libexec/gpgbin $PATH
+# set PATH /usr/local/opt/go/libexec/bin $PATH
 set GOPATH $HOME/code/go
 export GOPATH
