@@ -1,0 +1,38 @@
+{
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.fontFamily": "Monaco, 'Courier New', monospace",
+  "workbench.colorTheme": "Material Theme Darker",
+  "javascript.validate.enable": false,
+  "flow.useNPMPackagedFlow": true,
+  "flow.useLSP": false,
+  "window.zoomLevel": 0,
+  "editor.tabSize": 2,
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "files.trimTrailingWhitespace": true,
+  "editor.renderWhitespace": "all",
+  "files.insertFinalNewline": true,
+  "prettier.requireConfig": false,
+  "[javascript]": {},
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "workbench.settings.editor": "json",
+  "files.associations": {
+    ".envrc": "shellscript",
+    ".envrc.example": "shellscript"
+  },
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "breadcrumbs.enabled": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
