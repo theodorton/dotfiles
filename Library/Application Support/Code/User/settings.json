@@ -1,0 +1,156 @@
+{
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "rideveien": "linux",
+    "raspberrypi": "linux",
+    "homepi": "linux"
+  },
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.tabSize": 2,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.trimTrailingWhitespace": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "jnbt.vscode-rufo"
+  },
+  "[gemfile]": {
+    "editor.defaultFormatter": "jnbt.vscode-rufo"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "files.associations": {
+    "*.html.erb": "erb",
+    "Tiltfile*": "tiltfile",
+    "docker-compose*.yml": "dockercompose",
+    ".envrc-example": "shellscript"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.documentSelectors": ["**/*.ts", "**/*.rb", "**/*.tsx"],
+  "redhat.telemetry.enabled": false,
+  "tabnine.experimentalAutoImports": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false,
+    "yaml": true,
+    "ruby": true
+  },
+  "[git-commit]": {
+    "editor.rulers": [50, 72]
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "scm.inputFontFamily": "monospace",
+  "emmet.showAbbreviationSuggestions": false,
+  "emmet.showExpandedAbbreviation": "never",
+  "files.trimFinalNewlines": false,
+  "workbench.colorTheme": "Snazzy Operator",
+  "prettier.requireConfig": false,
+  "prettier.printWidth": 100,
+  "org.todoKeywords": ["TODO", "DONE"],
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.includePath": [
+    "/opt/homebrew/opt/boost/include/",
+    "/Users/theodorton/.nodenv/versions/16.14.2/include/node/",
+    "/Users/theodorton/code/skalar/wibit/node_modules/node-addon-api"
+  ],
+  "explorer.autoReveal": false,
+  "path-autocomplete.extensionOnImport": true,
+  "path-autocomplete.excludedItems": {
+    "**/*.ts": { "when": "**" },
+    "**/*.tsx": { "when": "**" },
+  },
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "default"
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+    },
+    {
+      "label": "Recent Issues",
+      "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+    }
+  ],
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    },
+    {
+      "label": "Ready for review",
+      "query": "is:open draft:false -author:${user}"
+    }
+  ],
+  "typescript.tsserver.watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents"
+  },
+  "githubPullRequests.pullBranch": "never",
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "editor.snippets.codeActions.enabled": false,
+  "editor.snippetSuggestions": "none",
+  "html.format.enable": false,
+  "css.format.enable": false,
+  "gitlens.views.commits.files.layout": "list",
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": false,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "references": true
+  }
+}
