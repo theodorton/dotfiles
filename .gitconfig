@@ -1,15 +1,11 @@
-# This is Git's per-user configuration file.
 [user]
   name = Theodor Tonum
   email = theodor@tonum.no
-	signingkey = C0A71406
 [push]
-	default = simple
+        default = simple
 [core]
-	excludesfile = ~/.gitignore
+        excludesfile = ~/.gitignore
 [alias]
-	cp = cherry-pick
-[commit]
-	gpgsign = false
+        cp = cherry-pick
 [github]
-	user = theodorton
+        user = theodorton
