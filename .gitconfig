@@ -4,7 +4,7 @@
 [push]
         default = simple
 [core]
-        excludesfile = ~/.gitignore
+        excludesfile = ~/.global_gitignore
 [alias]
         cp = cherry-pick
 [github]
