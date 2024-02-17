@@ -36,6 +36,8 @@ alias gsp 'git stash pop'
 alias grb 'git rebase'
 alias grc 'git rebase --continue'
 
+alias yo 'yarn outdated'
+
 function j
   cd (fasd -sdi "$argv")
 end
