@@ -145,3 +145,8 @@ end
 
 complete -c pull -n '_is_gh_clone_with_one_arg' -xa '(_fetch_repos_for_username)' -f
 
+function run\-stashed -d "Stash changes and run a command"
+  git stash save --quiet -uk
+  and $argv
+  git stash pop --quiet
+end
