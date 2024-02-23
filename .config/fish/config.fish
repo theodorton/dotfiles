@@ -71,9 +71,40 @@ alias fly 'flyctl'
 function eol -d "Prints the end of life for a given programming language or software package"
   # if the argument is not empty
   if test -n "$argv"
-    curl --silent  https://endoflife.date/api/$argv.json | jq '.[0]'
+    # Download https://endoflife.date/api/$argv.json and store response in a local variable
+    set response (curl --silent https://endoflife.date/api/$argv.json)
+
+    # Find all objects where lts is a string, and convert to a JSON array
+    set lts (echo $response | jq 'map(select(.lts | type == "string"))')
+
+    # Check if lts is an empty array with JQ
+    if test (echo $lts | jq 'length') -gt 0
+      echo $lts | jq '.[0]'
+    else
+      # Otherwise, print the first object in the response
+      echo $response | jq '.[0]'
+    end
   else
     # print a newline
     echo
   end
 end
+
+# If ~/.config/fish/eol_cache.json exists, and it's older than 1 day, delete it
+if test -e ~/.config/fish/eol_cache.json
+  and test (date -r ~/.config/fish/eol_cache.json +%s) -lt (math (date +%s) - 86400)
+  and rm ~/.config/fish/eol_cache.json
+end
+
+# If ~/.config/fish/eol_cache.json does not exist, or it's empty, create it by downloading from https://endoflife.date/api/all.json
+if not test -e ~/.config/fish/eol_cache.json
+  or test -z (cat ~/.config/fish/eol_cache.json)
+  and curl --silent https://endoflife.date/api/all.json > ~/.config/fish/eol_cache.json
+end
+
+# Add completions for eol function - use  returns an array with possible values
+complete -c eol -a '(cat ~/.config/fish/eol_cache.json | jq -r '.[]')' -f
+
+# Also disable the file completion for this command
+complete -c eol -n '__fish_use_subcommand' -a 'all' -f
+
