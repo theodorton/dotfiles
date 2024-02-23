@@ -152,5 +152,8 @@
     "definition": true,
     "workspaceSymbol": true,
     "references": true
-  }
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
 }
