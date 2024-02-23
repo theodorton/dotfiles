@@ -30,7 +30,8 @@
   },
   "[ruby]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "jnbt.vscode-rufo"
+    "editor.formatOnPaste": false,
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
   },
   "[gemfile]": {
     "editor.defaultFormatter": "jnbt.vscode-rufo"
@@ -45,7 +46,8 @@
     "*.html.erb": "erb",
     "Tiltfile*": "tiltfile",
     "docker-compose*.yml": "dockercompose",
-    ".envrc-example": "shellscript"
+    ".envrc-example": "shellscript",
+    "*.racc": "ruby"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.documentSelectors": ["**/*.ts", "**/*.rb", "**/*.tsx"],
@@ -155,5 +157,10 @@
   },
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
+  },
+  "rubyLsp.formatter": "auto",
+  // Do not exclude .ruby-lsp folder
+  "files.exclude": {
+    "**/.ruby-lsp": false
   },
 }
