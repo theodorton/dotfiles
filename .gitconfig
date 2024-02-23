@@ -9,3 +9,13 @@
         cp = cherry-pick
 [github]
         user = theodorton
+[merge]
+        conflictstyle = diff3
+[rebase]
+        autosquash = true
+        autostash = true
+[init]
+        defaultBranch = main
+[diff]
+        algorithm = histogram
+        wsErrorHighlight = all
