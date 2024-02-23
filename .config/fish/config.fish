@@ -38,6 +38,8 @@ alias grc 'git rebase --continue'
 
 alias yo 'yarn outdated'
 
+alias untar='tar -xvf'
+
 function j
   cd (fasd -sdi "$argv")
 end
