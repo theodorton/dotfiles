@@ -108,3 +108,40 @@ complete -c eol -a '(cat ~/.config/fish/eol_cache.json | jq -r '.[]')' -f
 # Also disable the file completion for this command
 complete -c eol -n '__fish_use_subcommand' -a 'all' -f
 
+function pull -d "Clone a GitHub repository to ~/code/clones and change directory"
+  if test -z "$argv"
+    echo "Usage: pull <username> <repo>"
+    return 1
+  end
+
+  # Set a local repo variable with first and second argument joined by /
+  set repo $argv[1]/$argv[2]
+
+  curl --silent --fail https://github.com/$repo > /dev/null
+  if test $status -ne 0
+    echo "Repo $repo unavailable"
+    return 1
+  end
+
+  mkdir -p ~/code/clones/$repo
+  and git clone -v git@github.com:$repo.git ~/code/clones/$repo
+  and cd ~/code/clones/$repo
+end
+
+function _fetch_repos_for_username
+    # Check if we are at the second argument position.
+    set -l cmd (commandline -opc)
+    if count $cmd = 2
+        set -l username $cmd[2]
+        gh repo list $username --limit 100 --json name | jq -r '.[].name'
+    end
+end
+
+function _is_gh_clone_with_one_arg
+    set -l cmd (commandline -opc)
+    # Return true (status 0) if the command is pull and exactly one argument is provided
+    test (count $cmd) = 2; and test $cmd[1] = 'pull'
+end
+
+complete -c pull -n '_is_gh_clone_with_one_arg' -xa '(_fetch_repos_for_username)' -f
+
